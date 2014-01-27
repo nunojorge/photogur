@@ -1,6 +1,12 @@
 Photogur::Application.routes.draw do
   get 'pictures' => 'pictures#index'
-  get 'pictures/:id' => 'pictures#show', as: "picture"
+
+  post 'pictures' => "pictures#create" # this is a new line of code
+  get 'pictures/new' => 'pictures#new' # this is also a new line of code
+
+
+  get 'pictures/:id' => 'pictures#show'
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -56,4 +62,4 @@ Photogur::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
