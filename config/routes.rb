@@ -4,7 +4,8 @@ Photogur::Application.routes.draw do
 
 
   get 'pictures' => 'pictures#index'
-
+  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
+  patch 'pictures/:id' => "pictures#update"
   post 'pictures' => "pictures#create" # this is a new line of code
   get 'pictures/new' => 'pictures#new' # this is also a new line of code
 
