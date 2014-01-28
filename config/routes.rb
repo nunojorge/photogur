@@ -11,6 +11,9 @@ Photogur::Application.routes.draw do
 
 
   get 'pictures/:id' => 'pictures#show'
+  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+
+  root :to => "pictures#index"
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
